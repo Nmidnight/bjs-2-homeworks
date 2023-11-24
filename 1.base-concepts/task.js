@@ -10,6 +10,7 @@ function solveEquation(a, b, c) {
     result2 = (-b - Math.sqrt(d)) / (2 * a);
    arr.push(result1, result2);
   } else if (d === 0) {
+    let result1;
     result1 = -b / (2 * a);
    arr.push(result1);
   }
@@ -24,8 +25,7 @@ function solveEquation(a, b, c) {
   let creditBody = amount - contribution;
   let payment = creditBody * (convertedPersent + (convertedPersent / (((1 + convertedPersent) ** countMonths) - 1)));
   let sum = payment * countMonths;
-  let newSum = sum.toFixed(2);
-  return Number(newSum);
+  return Number(sum.toFixed(2));
  }
  
  console.log(calculateTotalMortgage(10, 0, 50000, 12));
